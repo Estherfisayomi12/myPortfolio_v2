@@ -1,70 +1,18 @@
-$('.js--introduction').function(direction) {
-  console.log("This is a zobo, cold one!")
-    if (direction == "down") {
-        $('nav').addClass('sticky');
-    } else {
-        $('nav').removeClass('sticky');
-    }
-},  {
-    offset: '100%;'
+/* This is a jQuery function that is executed when the document is ready. It is checking the scroll
+position of the document and if it is greater than 50, it is changing the background color of the
+element with the id of leadstoheader2. */
+$(document).ready(function () {
+	var scrollPos = 0;
+	$(document).scroll(function () {
+		scrollPos = $(this).scrollTop();
+		if (scrollPos > 50) {
+			$('#leadstoheader2').css('background-color', '#fff');
+			$('.header-list').css('color', 'rgb(6, 6, 94)');
+			$('.header-img').attr('src', '/img/log.png');
+		} else {
+			$('#leadstoheader2').css('background-color', 'rgb(6, 6, 94)');
+			$('.header-list').css('color', '#fff');
+			$('.header-img').attr('src', '/img/log1.png');
+		}
+	});
 });
-
-
-
-
-/* var waypoints = $('#handler-first').waypoint(function(direction) {
-  notify(this.element.id + ' hit 25% from top of window') 
-}, {
-  offset: '25%'
-})*/
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// // When the user scrolls the page, execute myFunction
-// window.onscroll = function() {myFunction()};
-
-// // Get the navbar
-// var navbar = document.getElementById("nav");
-
-// // Get the offset position of the nav
-// var sticky = nav.offsetTop;
-
-// // Add the sticky class to the nav when you reach its scroll position. Remove "sticky" when you leave the scroll position
-// function myFunction() {
-//   if (window.pageYOffset >= sticky) {
-//     nav.classList.add("sticky")
-//   } else {
-//     nav.classList.remove("sticky");
-//   }
-// }
