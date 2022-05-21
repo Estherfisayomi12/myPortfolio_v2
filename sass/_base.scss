@@ -1,0 +1,61 @@
+:root{
+    --color-white: #fff;
+    --color-white-2: rgb(235, 224, 224);
+    
+    --color-red: rgb(247, 14, 14);
+
+    --color-grey: rgb(56, 52, 52);
+    --color-grey-light: aliceblue;
+
+    --color-blue: rgb(6, 6, 94);
+    --color-blue-light: rgb(41, 41, 219);
+    --color-blue-dark: rgb(4, 4, 31);
+
+    --color-pink-light: rgb(240, 208, 208);
+    
+}
+
+
+$bp-largest: 75em; //1200px
+$bp-large: 62.5em ; //1000px
+$bp-small: 56.25em ; //900px
+$bp-smaller: 50em; //800px
+$bp-little: 37.5em ; //600px
+$bp-tiny: 31.25em ; //500px
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+*,
+*::after,
+*::before{
+    box-sizing: inherit;
+}
+
+html{
+    box-sizing: border-box;
+    font-size: 62.5%; /* 1rem = 10px, 10px/16px = 62.5%*/
+    scroll-behavior: smooth;
+
+    @media only screen and (max-width: $bp-large){
+        font-size: 56.25%;
+    }
+
+    @media only screen and (max-width: $bp-small){
+        font-size: 50%
+    }
+    
+}
+
+body{
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 500;
+    line-height: 1.6;
+    color: var(--color-grey-dark-2);
+    background-color: var(--color-white);
+    color: var(--color-grey);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
