@@ -1,13 +1,3 @@
-$('.js--introduction').function(direction) {
-  console.log("This is a zobo, cold one!")
-    if (direction == "down") {
-        $('nav').addClass('sticky');
-    } else {
-        $('nav').removeClass('sticky');
-    }
-},  {
-    offset: '100%;'
-});
 
 
 
